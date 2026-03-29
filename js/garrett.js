@@ -8,7 +8,7 @@ for (let i = 0; i < pics.length; i++) {
     pics[i].addEventListener("error", function (){
 
     if (reduceMotion) {
-    this.src= "https://raw.githubusercontent.com/anitamtsai/garrettfinal/refs/heads/main/images/runnerpng.png";
+    this.src= 'https://raw.githubusercontent.com/anitamtsai/garrettfinal/refs/heads/main/images/runnerpng.png';
 }
     else{
     this.src='https://raw.githubusercontent.com/anitamtsai/garrettfinal/refs/heads/main/images/runnergif.gif';
