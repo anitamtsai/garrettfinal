@@ -8,10 +8,10 @@ for (let i = 0; i < pics.length; i++) {
     pics[i].addEventListener("error", function (){
 
     if (reduceMotion) {
-    this.src= "https://raw.githubusercontent.com/anitamtsai/338final/refs/heads/main/images/runnerpng.png";
+    this.src= "https://github.com/anitamtsai/garrettfinal/blob/main/images/runnerpng.png?raw=true";
 }
     else{
-    this.src='https://raw.githubusercontent.com/anitamtsai/338mobile/main/images/runnergif.gif';
+    this.src='https://raw.githubusercontent.com/anitamtsai/garrettfinal/refs/heads/main/images/runnergif.gif';
     this.alt = "image is not available";
 }
     })
