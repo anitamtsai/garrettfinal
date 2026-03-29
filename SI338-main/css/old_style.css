@@ -1,0 +1,252 @@
+/* Global box model */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  color: #111;
+  background-color: #ecf0f1;
+  overflow-x: hidden;
+}
+
+/* Header */
+
+header {
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 22px 18px;
+  border-bottom: 10px solid #c0392b;
+}
+
+/* Profile */
+c
+
+.photo {
+  width: 170px;
+  height: 170px;
+  border-radius: 999px;
+  border: 4px solid #f1c40f;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.meta {
+  width: 100%;
+}
+
+.meta h1 {
+  margin: 8px 0 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.meta h2 {
+  margin: 10px auto 0;
+  font-size: 1rem;
+  color: #f1c40f;
+  text-transform: uppercase;
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.meta a {
+  color: #f1c40f;
+  text-decoration: none;
+}
+
+.meta a:hover,
+.meta a:focus {
+  text-decoration: underline;
+}
+
+/* Keyboard focus (accessibility) */
+a:focus,
+button:focus {
+  outline: 3px solid #f1c40f;
+  outline-offset: 3px;
+}
+
+/* Track design */
+#meets {
+  max-width: 1200px;
+  margin: 28px auto;
+  padding: 18px;
+  background-color: #c0392b;
+  border: 10px solid #2c3e50;
+  border-radius: 60px;
+  box-shadow:
+    inset 0 0 0 4px #ffffff,
+    inset 0 0 0 26px rgba(255, 255, 255, 0.08),
+    inset 0 0 0 30px #ffffff;
+}
+
+/* Title */
+#meets-title {
+  color: #ffffff;
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+  text-shadow: 2px 2px #2c3e50;
+}
+
+/* Infield grid */
+#meet-grid {
+  background-color: #27ae60;
+  padding: 18px;
+  border: 3px solid #ffffff;
+  border-radius: 30px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+/* Meet card */
+.meet-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.meet-card h3 {
+  margin: 0;
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.spacer img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.open-panel {
+  width: 100%;
+  border: none;
+  background-color: #c0392b;
+  color: #ffffff;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.open-panel:hover {
+  filter: brightness(0.95);
+}
+
+/* Podium */
+.podium {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: 18px 0 22px;
+  padding-bottom: 16px;
+
+  border-bottom: 16px repeating-linear-gradient(
+    90deg,
+    #ffffff,
+    #ffffff 16px,
+    #000000 16px,
+    #000000 32px
+  );
+}
+
+.podium-card {
+  background-color: #ffffff;
+  border: 3px solid #2c3e50;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.place-1{
+    grid-column: 1 / -1;
+    width: 50%;
+    margin: auto
+}
+
+.place-2{
+  justify-content:unset;
+}
+.place-3 {
+  height: auto;
+  order: initial;
+}
+
+.place-1 {
+  border-color: #f1c40f;
+}
+
+/* Performance panel */
+#performance-panel {
+  background-color: #ffffff;
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 18px;
+  border: 4px solid #2c3e50;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Breakpoints */
+@media (min-width: 560px) {
+  #meet-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+  }
+
+  .photo {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (min-width: 900px) {
+  #meet-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #meets {
+    padding: 40px;
+    border-radius: 500px;
+  }
+
+  #meet-grid {
+    border-radius: 400px;
+  }
+
+  .podium {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: end;
+  }
+
+  .place-1 { height: 400px; order: 2; }
+  .place-2 { height: 320px; order: 1; }
+  .place-3 { height: 240px; order: 3; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+  }
+}

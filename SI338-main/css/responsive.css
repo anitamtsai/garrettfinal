@@ -1,0 +1,38 @@
+@media screen and (min-width: 768px){
+    .meet-grid{
+        display:grid;
+        grid-template-columns: repeat(3,30%);
+        width:90%;
+        justify-content: space-around;
+        margin:auto
+    }
+
+    nav{
+        padding: 10px 20px;
+    }
+    
+
+    .profile-grid{
+    display:grid;
+    grid-template-columns: 30% 30% 40%;
+    
+    /*does this count as display grid on child element? since it is a photo */  
+    }
+ 
+ul{
+    display: grid;
+    grid-column-start: 2;
+    text-align: left;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+}
+}
+
+
+img{
+    width: 95%;
+    max-height: 50vh;
+}
+
+/*when the photo is in middle size it looks very weird stretched, 619x736)
+
